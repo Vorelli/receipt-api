@@ -1,0 +1,6 @@
+services:
+  receipt-api:
+    build: .
+    container_name: receipt-api
+    ports:
+      - "7979:7979"
