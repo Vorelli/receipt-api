@@ -1,0 +1,15 @@
+meta {
+  name: Get Points of Receipt
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:7979/receipts/:receiptId/points
+  body: none
+  auth: none
+}
+
+params:path {
+  receiptId: 4ad13591-b69c-48e1-abae-c4066d54ce83
+}
