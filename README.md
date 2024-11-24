@@ -1,8 +1,13 @@
-# Receipt Processor
+# Receipt Processor (runs on port 7979 by default; change in application.properties, if desired)
 
 ### Requirements for local build/run
 
 - Java 21
+
+### API Docs
+
+- In `src/main/resources/api.yml`
+- Used to generate api controllers and models via `openapi-generator`
 
 ### How to build and run locally
 
@@ -19,7 +24,7 @@
 
 ### Bruno API Client Examples
 
-- Located in BrunoApiExamples
+- Located in `./BrunoApiExamples`
 - Load with [bruno](https://www.usebruno.com/)
 
 ### How to run with Docker Compose
