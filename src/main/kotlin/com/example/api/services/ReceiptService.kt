@@ -11,9 +11,11 @@ import java.time.format.DateTimeFormatter
 
 @Service
 class ReceiptService(private val receiptRepository: ReceiptRepository) {
+    private val pointsCache = mutableMapOf<String, Long>()
+
     fun receiptsIdPointsGet(id: String): ReceiptsIdPointsGet200ResponseDto {
         return ReceiptsIdPointsGet200ResponseDto()
-            .points(calculatePoints(receiptRepository.receiptsIdGet(id)))
+            .points(pointsCache.getOrPut(id) { calculatePoints(receiptRepository.receiptsIdGet(id)) })
     }
 
     fun receiptsProcessPost(receiptDto: ReceiptDto): ReceiptsProcessPost200ResponseDto {
