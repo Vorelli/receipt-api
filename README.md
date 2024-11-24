@@ -4,7 +4,7 @@
 
 - Java 21
 
-### How to run locally
+### How to build and run locally
 
 (In Root)
 
@@ -13,9 +13,9 @@
 
 ### How to run tests
 
-(In Root)
+(In Root after building)
 
-1. `./gradlew integrationTest`
+1. `./gradlew test integrationTest`
 
 ### Bruno API Client Examples
 
